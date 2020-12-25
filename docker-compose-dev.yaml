@@ -18,14 +18,14 @@ services:
       # the mediawiki service
       - ./LocalSettings.php:/var/www/html/LocalSettings.php
     env_file:
-      - env.prod
+      - env.dev
   database:
     image: mariadb
     restart: always
     volumes:
       - wiki_database_storage:/var/lib/mysql
     env_file:
-      - env.prod
+      - env.dev
     # environment:
     #   # @see https://phabricator.wikimedia.org/source/mediawiki/browse/master/includes/DefaultSettings.php
     #   MYSQL_DATABASE: my_wiki

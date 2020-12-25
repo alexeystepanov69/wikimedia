@@ -29,7 +29,7 @@ $wgSitename = "OLIMP";
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://localhost:8080";
+$wgServer = $_ENV["SERVER_URL"]; //"http://localhost:8080";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
