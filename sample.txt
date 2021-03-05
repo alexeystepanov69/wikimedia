@@ -1,1 +1,4 @@
 sample.txt
+my new text string
+another text string
+
