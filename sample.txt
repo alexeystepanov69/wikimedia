@@ -1,4 +1,4 @@
 sample.txt
 master text
-my new text string
+# my new text string
 another text string
