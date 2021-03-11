@@ -2,3 +2,4 @@ sample.txt
 master text
 # my new text string
 another text string
+string 2021-03-11
