@@ -1,13 +1,6 @@
 FROM mediawiki
 
-RUN a2enmod ssl && a2enmod rewrite
-RUN mkdir -p /etc/apache2/ssl
-
-# COPY ../cert/. /etc/apache2/ssl
-COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY rimera.png /var/www/html/resources/assets/rimera.png
 COPY php.ini /usr/local/etc/php/php.ini
 # RUN ln -s /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
 
-EXPOSE 80
-EXPOSE 443

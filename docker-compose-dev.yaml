@@ -6,7 +6,9 @@ version: '3'
 services:
   mediawiki:
     # image: mediawiki
-    build: ./wiki
+    build:
+      context: ./wiki
+      dockerfile: Dockerfile.local
     restart: always
     ports:
       - 8080:80
@@ -19,6 +21,7 @@ services:
       # the mediawiki service
       # - ./php.ini:/usr/local/etc/php/php.ini
       - ./LocalSettings.php:/var/www/html/LocalSettings.php
+      - ./cert:/etc/apache2/ssl
     env_file:
       - env.dev
   database:
